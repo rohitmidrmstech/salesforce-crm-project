@@ -4,4 +4,9 @@ public class Leadtriggerhandler {
         
         
     }
+    public static void converLead(List<Lead> leadlst){
+        
+        
+        
+    }
 }
