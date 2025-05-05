@@ -18,4 +18,10 @@ public class AccHandler {
         public static void  showallClaimData(){
             
         }
+        public static void  showallClaimData1(){
+            
+        }
+        public static void  showallClaimData2(){
+            
+        }
 }
