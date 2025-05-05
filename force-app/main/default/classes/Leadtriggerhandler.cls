@@ -9,12 +9,6 @@ public class Leadtriggerhandler {
         
         
     }
-    //comment here
-    //Added new comment -5thMay
-    // Added new comment 2 5th May.
-   // Added new comment 3 - 5th May.
-  // Added new comment 4- 5th May.
-  // Added new comment 5- 5th May.
-
+// New Lead Trigger Handler comment- 5th may-1
 
 }
