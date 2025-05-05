@@ -12,4 +12,7 @@ public class AccHandler {
             }
         update lstac;
         }
+        public static void  showDetailClaim(){
+            
+        }
 }
