@@ -10,6 +10,6 @@ public class leadclass {
         c1.Email='rarar@gmail.com';
     insert c1;
     
-    
-}       
+}   
+// new Lead ClassHandler.    
 }
