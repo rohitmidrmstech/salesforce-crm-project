@@ -18,4 +18,7 @@ public class AccHandler {
         public static void  getLoggedInUserDetails(){
             
         }
+        public static void  showUserAccountDetails(){
+            
+        }
 }
