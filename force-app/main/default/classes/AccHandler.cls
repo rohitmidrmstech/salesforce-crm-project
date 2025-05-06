@@ -15,4 +15,7 @@ public class AccHandler {
         public static void  showDetailClaim(){
             
         }
+        public static void  getLoggedInUserDetails(){
+            
+        }
 }
