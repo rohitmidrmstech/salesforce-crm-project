@@ -22,6 +22,6 @@ public class AccHandler {
             
         }
         public static void  showallClaimData2(){
-            
+          //claim Detail 2  
         }
 }
