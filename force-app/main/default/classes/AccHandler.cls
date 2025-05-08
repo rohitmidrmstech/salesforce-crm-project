@@ -23,11 +23,5 @@ public class AccHandler {
         }
         public static void  showallClaimData2(){
         }
-  public static void  showallClaimData3(){
-        }
-        public static void  showallAccountInfoonSite(){
-        }
-        public static void  showallAccountInfoonSite2(){
-        }
 }
 }
