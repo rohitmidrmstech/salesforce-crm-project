@@ -22,7 +22,7 @@ public class AccHandler {
          * Selected Claim on the Experiance UI.
         */
         public static void  showDetailClaim2(){
-            // Code to commit.
+            // Code to commit-1
         
         }
 
