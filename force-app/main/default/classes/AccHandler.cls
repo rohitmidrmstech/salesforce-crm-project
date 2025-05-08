@@ -12,16 +12,12 @@ public class AccHandler {
             }
         update lstac;
         }
+        /** showDetailClaim - is used to show the detail info of
+         * Selected Claim on the Experiance UI.
+        */
         public static void  showDetailClaim(){
-            
+        
         }
-        public static void  showallClaimData(){
-            
-        }
-        public static void  showallClaimData1(){
-            
-        }
-        public static void  showallClaimData2(){
-        }
+
 }
 }
