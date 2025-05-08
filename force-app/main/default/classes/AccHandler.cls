@@ -18,6 +18,12 @@ public class AccHandler {
         public static void  showDetailClaim(){
         
         }
+          /** showDetailClaim2 - is used to show the detail info of
+         * Selected Claim on the Experiance UI.
+        */
+        public static void  showDetailClaim2(){
+        
+        }
 
 }
 }
