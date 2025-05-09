@@ -6,6 +6,7 @@ public with sharing class AccountController {
     }
     public static void  showDetailClaim2(){
         // Code to commit.
+        // test change1.
     
     }
 }
