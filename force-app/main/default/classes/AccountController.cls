@@ -4,4 +4,10 @@ public with sharing class AccountController {
         return [SELECT Id, Name ,Phone FROM Account ORDER BY CreatedDate desc Limit 1 ];
 
     }
+    public static void  showDetailClaim2(){
+        // Code to commit.
+        // test change1.
+        // test change2.
+    
+    }
 }
