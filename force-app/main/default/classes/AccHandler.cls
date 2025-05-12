@@ -27,6 +27,9 @@ public class AccHandler {
 
         
         }
+        public static void  showDetailClaim3(){
+            // Code showDetailClaim3.
+        }
 
 }
 }
