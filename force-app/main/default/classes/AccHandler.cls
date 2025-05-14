@@ -33,6 +33,7 @@ public class AccHandler {
         public static void  showDetailClaim4(){
             // Code showDetailClaim4.
            // make sure to bulkify the code.
+           // I have  bulkified the code please review it once.
         }
 
 
