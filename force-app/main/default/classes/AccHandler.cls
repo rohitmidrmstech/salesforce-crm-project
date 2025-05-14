@@ -30,6 +30,10 @@ public class AccHandler {
         public static void  showDetailClaim3(){
             // Code showDetailClaim3.
         }
+        public static void  showDetailClaim4(){
+            // Code showDetailClaim4.
+        }
+
 
 }
 }
