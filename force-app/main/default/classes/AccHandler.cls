@@ -14,7 +14,7 @@ public class AccHandler {
         }
       /** get ClaimDetails of the contractor **/
         public static void claimDetails(){
-             
+           System.debug('Devbug for claim') ;
         }
         
 }
