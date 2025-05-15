@@ -12,6 +12,7 @@ public class AccHandler {
             }
         update lstac;
         }
+      /** get ClaimDetails of the contractor **/
         public static void claimDetails(){
              
         }
