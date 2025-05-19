@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title ="Child to parent Communiction">
+        <div class ="slds-var-m-around_large"                     onclose= {closeHandler}
+        >
+            <lightning-button label ="ShowModal" onclick={clickHandler}>
+            </lightning-button>
+            <h1>{msg}</h1>
+            <template if:true={ShowModal}>
+                <c-p2c-modal-component
+               ></c-p2c-modal-component>     
+            </template>
+    </div>
+    </lightning-card>
+</template>

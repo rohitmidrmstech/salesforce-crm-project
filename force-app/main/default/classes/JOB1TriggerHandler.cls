@@ -16,6 +16,5 @@ public class JOB1TriggerHandler {
         }
         insert LstBook;
 */
-// New Comment on JobHandler.
     }
 }
