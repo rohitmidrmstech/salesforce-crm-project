@@ -1,0 +1,15 @@
+<template>
+ <lightning-card title ="Logged in user data "  icon-name = "utility:user ">
+<div class ="slds-p-around-medium">
+    <template if:true={user.data}>
+        <p> ID : {userId}</p><br/>
+        <p> Name : {name}</p>
+
+
+    </template>
+
+
+</div>
+
+ </lightning-card> 
+</template>

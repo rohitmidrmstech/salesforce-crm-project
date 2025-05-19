@@ -1,0 +1,32 @@
+<template>
+<c-carousel-component
+card-heading="parent to child message setting"
+     isvalid = true 
+      number = 20
+        ></c-carousel-component>
+        <lightning-card title ="parent to child Action Call">
+         <div class ="slds-m-around_medium" >
+<lightning-input type ="number" label="Enter percentage" onkeyup={changehandler} value={percentage}>
+</lightning-input>
+<c-progress-component
+progress-value ={percentage}
+></c-progress-component>
+         </div>  
+        </lightning-card>
+        <div class ="slds-var-m-around_medium"  >
+            <lightning-button variant="brand" label="ResetSlider"  onclick={handleClick} ></lightning-button>
+            <c-p2c-slider-component> 
+            </c-p2c-slider-component>
+
+        </div> 
+        <lightning-card title ="Show Parent to child Communication" >
+        <div class="slds-m-around_medium">
+        <lightning-button label ="showModel" onclick ={clickHandler}></lightning-button>
+        <template if:true={showModel}>
+            <c-c2p-model-component
+            onclose ={closeok}
+            > </c-c2p-model-component>
+        </template>
+    </div>
+</lightning-card>
+</template>

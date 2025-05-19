@@ -1,0 +1,98 @@
+<template>
+<!-- <div class="slds-card__header slds-grid"> -->
+<lightning-card  >
+<div class="slds-text-align_center slds-text-heading_large"><b>Search Val<span style="color: #1E8CFB ;" >id</span>8 Member</b></div> 
+<!-- <br> -->
+<div class="slds-box slds-m-around_xx-large">
+
+<div class="slds-text-align_left  slds-p-around_medium"><b> Search by Name</b></div>
+<lightning-layout>
+    <lightning-layout-item>
+
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col slds-size_1-of-2" style="align-self: center">
+            <lightning-input 
+            label="First Name"
+            value={namevalue}
+            onchange={handleNameChange}>
+    </lightning-input></div>
+<div class="slds-col slds-size_1-of-2" style="align-self: center">
+    <lightning-input 
+    label="Middle Name"
+    value={middlenvalue}
+    onchange={handleMiddleChange}>
+</lightning-input></div>
+<br/>
+
+<div class="slds-col slds-size_1-of-2" style="align-self: center">
+    <lightning-input 
+    label="Last Name"
+    value={Lastnvalue}
+    onchange={handleLastChange}>
+</lightning-input></div>
+
+</div>
+</lightning-layout-item>
+</lightning-layout>
+<br>
+<br>
+<div class="slds-text-align_center" ><b>OR</b></div> 
+<br>
+<div class ="slds-p-around_medium"><strong> Search by Valid ID</strong></div>
+<div class="slds-p-around_medium lgc-bg">
+<lightning-layout>
+    <lightning-layout-item>
+        <lightning-input 
+        label="ID Number"
+        value={idvalue}
+        onchange={handleidChange}>
+</lightning-input></lightning-layout-item>
+</lightning-layout>
+</div>
+<button class="slds-float_right button slds-p-around_medium button2" style="background-color:rgb(21, 17, 17);color:white;width:100px;height:40px;text-align: center;"
+ onclick ={UpdateText}>SEARCH</button>
+<br>
+<br>
+</div>
+
+</lightning-card>
+
+<lightning-card>
+<div class="slds-text-align_left  slds-p-around_medium"><b> Search Results</b></div>
+<!-- <br> -->
+<div class=" slds-m-around_xx-large">
+<table class="slds-table slds-table_cell-buffer slds-no-row-hover slds-table_bordered">
+    <thead>
+        <tr class="slds-line-height_reset">
+        <th class="" scope="col">
+            <div class="slds-truncate" >Valid8ID</div>
+        </th>
+        <th class="" scope="col">
+            <div class="slds-truncate" >FirstName</div>
+        </th>
+        <th class="" scope="col">
+            <div class="slds-truncate" >Middle Name</div>
+        </th>
+        <th class="" scope="col">
+            <div class="slds-truncate" >LastName</div>
+        </th>
+        <th class="" scope="col">
+            <div class="slds-truncate" >Actions</div>
+        </th>
+        </tr>
+         <template for:each={datavalue} for:item="valObj">                
+            <tr class="slds-hint-parent" key={valObj.namevalue}>
+               <td>{valObj.idvalue}</td>
+               <td>{valObj.namevalue}</td>
+               <td>{valObj.middlenvalue}</td>
+               <td>{valObj.Lastnvalue}</td>
+               <td>{valObj.Action}<div><button  style="background-color:rgb(87, 193, 193);color:white ; border:none"
+                  onclick={handleClick}  >View</button>
+               </div></td>
+            </tr>            
+        </template> 
+    </thead>
+        </table> 
+        </div>
+</lightning-card> 
+</template>

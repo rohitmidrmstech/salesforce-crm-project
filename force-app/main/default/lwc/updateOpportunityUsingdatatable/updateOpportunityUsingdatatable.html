@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Update Opportunities">
+        <p>
+            <lightning-button label="Close Opportunities" onclick={getSelectedName}></lightning-button>
+        </p>
+        <lightning-datatable data={data} columns={columns} key-field="Id" selected-rows={selectedRows}>
+        </lightning-datatable>
+    </lightning-card>
+</template>

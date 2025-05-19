@@ -1,0 +1,46 @@
+<template>
+    
+    <div class ="slds-var-m-around_medium">
+    <lightning-card title ="Dear user See what query you Have Raised And Status of Your Query" style="background-color:rgb(218, 25, 25)">
+    <template if:true ={userTrackData.data}>
+        <template for:each={userTrackData.data} for:item="track1">
+<div class="slds-box slds-box_xx-small" key ={track1.Id}  style="background:rgb(218, 25, 25)">
+    <p> <strong> Tracking Id :</strong> {track1.CaseNumber__c}</p>
+    <br/>
+    <p> <strong> Your Issue :</strong> {track1.Issue__c}</p>
+<br/>
+<p> <strong> Category of Issue :</strong> {track1.Sub_Issue_Type__c}</p>
+<br/>
+ <strong> Description of Your Query:</strong> {track1.Description__c}
+ <lightning-button label ="view your status"  class ="slds-align_right" variant ="brand" onclick ={handleclick}></lightning-button>
+<br/>
+</div>
+        </template>
+    </template>
+    <!--<div class ="slds-align_absolute-center">
+    <lightning-button label ="view your status" variant ="brand" onclick ={handleclick}></lightning-button>
+</div>-->
+    <template if:true ={userTrackData.data}>
+        <template for:each={userData} for:item="track">
+<div class="slds-box slds-box_xx-small" key ={track.Id}   style="background:rgb(218, 25, 25)">
+    <p> <strong>Query Date :</strong> {track.CreatedDate__c	}</p>
+    <br/>
+    <p> <strong> Tracking Id :</strong> {track.CaseNumber__c}</p>
+    <br/>
+    <p> <strong> Query Status :</strong> {track.Status__c}</p>
+    <lightning-progress-indicator current-step={track.Status__c}>
+        <lightning-progress-step label="Initial" value="initial">
+        </lightning-progress-step>
+        <lightning-progress-step label="In Process" value="In Progress">
+        </lightning-progress-step>
+        <lightning-progress-step label="Resolved" value="Resolved">
+        </lightning-progress-step>
+    </lightning-progress-indicator>
+</div>
+
+</template>
+</template>
+  </lightning-card> 
+</div>
+
+</template>

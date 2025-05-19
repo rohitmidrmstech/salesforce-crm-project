@@ -1,0 +1,14 @@
+<template>
+<lightning-card title ="conditionally rendered Element">
+<div class ="slds-var-m-around_medium">
+hello, {showme}
+<lightning-input type="checkbox" label="Click me" onchange={handleChange}></lightning-input>
+<template if:true={showdetails}>
+i am visible
+</template>
+<template if:false={showdetails}>
+i am not visible
+</template>
+</div>
+</lightning-card>  
+</template>
