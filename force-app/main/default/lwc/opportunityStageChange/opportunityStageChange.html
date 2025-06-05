@@ -1,0 +1,35 @@
+<template>
+ <lightning-card title ="Opportunity Search Record" >
+<lightning-input type ="search" label="Search opportunity" value ={searchvalue} onchange={handlechange}></lightning-input>
+<lightning-button label="Search" type ="brand" onclick ={searchopportunity}>   
+</lightning-button>
+<table class="slds-table slds-table_cell-buffer slds-table_bordered slds-m-top_small">
+    <thead>
+       <tr class="slds-line-height_reset">
+          <th class="" scope="col">
+             <div class="slds-truncate" title=" Name">Name</div>
+          </th>
+          <th class="" scope="col">
+             <div class="slds-truncate" title="stageName">Stage Name</div>
+          </th>        
+       </tr>
+    </thead>
+    
+    <tbody> 
+        <template if:true={opportunityrecord} >
+       <template for:each={opportunityrecord} for:item="opp">
+          <tr class="slds-hint-parent" key={opp.Id}>
+             <td>
+                {opp.Name}
+             </td>
+             <td>
+                {opp.StageName}
+             </td>        
+          </tr>
+       </template>
+    </template>
+    </tbody>
+ </table>
+<lightning-button label ="change Stage" type ="brand" onclick ={stageChange}></lightning-button>
+ </lightning-card> 
+</template>

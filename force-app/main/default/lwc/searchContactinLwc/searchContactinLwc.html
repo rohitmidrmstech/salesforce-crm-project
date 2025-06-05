@@ -1,0 +1,69 @@
+<template>
+    <lightning-card>
+        <div class="slds-text-align_left "><b> Search by Name</b></div>      
+        <div class="slds-grid slds-gutters slds-p-horizontal_large">
+            <div class="slds-col slds-size_1-of-2 ">
+                <lightning-input 
+                value={namevalue}
+                onchange={handleNameChange}>
+        </lightning-input>
+    </div>
+    <lightning-button class="slds-float_right button slds-align-absolute_center " label ="search" onclick={handleclick}></lightning-button>
+    </div>
+    <template if:true={showRecScreen}>
+        <lightning-record-form
+                object-api-name={objectApiName}
+                fields={fields}
+                onsuccess={handleSuccess}>
+        </lightning-record-form>
+        </template>
+        <div class ="slds-text-align_right slds-p-around_medium">
+        <lightning-button name="Update" variant ="brand" label="Create New Contact" onclick={handleUpdate}></lightning-button>
+    </div>
+    
+    <table class="slds-table ">
+        
+        <thead>
+            <tr class="slds-line-height_reset ">
+                <th class="" scope="col">
+                    <div class="slds-truncate" >Action</div>
+                </th>
+            <th class="" scope="col">
+                <div class="slds-truncate" >Name</div>
+            </th>
+            <th class="" scope="col">
+                <div class="slds-truncate" >Email</div>
+            </th>
+            <th class="" scope="col">
+                <div class="slds-truncate" >Mobile Phone</div>
+            </th>
+            <th class="" scope="col">
+                <div class="slds-truncate" >Billing city</div>
+            </th>
+            <th class="" scope="col">
+                <div class="slds-truncate" >Billing State</div>
+            </th>
+            </tr>
+            <template if:true={contacts}>
+             <template for:each={contacts} for:item="con">  
+                <tr class="slds-hint-parent slds-border_bottom" key={con.Id}>
+                    <td>{con.Action}<div><button  onclick={navigateToRecordViewForm}> Record-View</button>              
+                     </div>
+                     <div><button  onclick={navigateToRecordEditForm}> Record Edit</button>              
+                     </div>
+                     <div><button  onclick={navigateToRecordDeleteForm}>Record Delete</button>              
+                     </div>                    
+                  </td>
+                   <td>{con.Name}</td>
+                   <td>{con.Email}</td>
+                   <td>{con.MobilePhone}</td>
+                   <td>{con.lName}</td>                                    
+                   
+
+                </tr>            
+            </template> 
+        </template>           
+        </thead>
+            </table>
+    </lightning-card>
+</template>

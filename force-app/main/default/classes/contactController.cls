@@ -1,8 +1,29 @@
-public class contactController {
-    @AuraEnabled
-    public static List<contact> getcontacts(){
-        List<contact> conlist = new List<contact>();
-        conlist = [SELECT Id,Name ,Phone FROM contact Limit 10];
-        return conlist;
+public with sharing class ContactController {
+    @AuraEnabled(cacheable=true)
+    public static List<Contact> getContactList() {
+        return [
+            SELECT Id, Name, Title, Phone, Email, Birthdate, Department, CreatedDate
+            FROM Contact
+        ];
+    }
+
+    @AuraEnabled(cacheable=true)
+    public static List<Contact> findContacts(String searchKey) {
+        String key = '%' + searchKey + '%';
+        return [
+            SELECT Id, Name, Title, Phone, Email
+            FROM Contact
+            WHERE Name LIKE :key
+            LIMIT 10
+        ];
+    }
+
+    @AuraEnabled(cacheable=true)
+    public static Contact getSingleContact() {
+        return [
+            SELECT Id, Name, Title, Phone, Email
+            FROM Contact
+            LIMIT 1
+        ];
     }
 }

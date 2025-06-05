@@ -1,0 +1,8 @@
+<template>
+ <div>
+     <div id="map" style="height: 500px;"></div>
+     <lightning-input type="text" label="Starting Point" value={startPoint} onchange={handleStartPointChange}></lightning-input>
+     <lightning-input type="text" label="Ending Point" value={endPoint} onchange={handleEndPointChange}></lightning-input>
+     <lightning-button label="Get Directions" onclick={getDirections}></lightning-button>
+ </div>
+</template>

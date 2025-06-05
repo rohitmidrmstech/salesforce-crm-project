@@ -1,7 +1,11 @@
 /**
  * Class containing tests for SiteRegisterController
+ * History:
+* - VERSION  DEVELOPER NAME                  DATE            DETAIL FEATURES/CSR/TTP
+    1.0      Hithesh Ravuri                  15/04/2025      Commenting out the component as part of the legacy API. Component version is less and no one has claimed it assuming no one is using it.
  */
 @IsTest public with sharing class SiteRegisterControllerTest {
+    /*
     @IsTest(SeeAllData=true) static void testRegistration() {
         SiteRegisterController controller = new SiteRegisterController();
         controller.username = 'test@force.com';
@@ -14,4 +18,5 @@
         controller.confirmPassword = 'abcd123';
         System.assert(controller.registerUser() == null);  
     }
+        */
 }

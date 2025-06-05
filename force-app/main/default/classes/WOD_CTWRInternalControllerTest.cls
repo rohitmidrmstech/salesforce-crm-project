@@ -1,0 +1,214 @@
+@isTest
+public class WOD_CTWRInternalControllerTest {
+    public static testmethod void internalCOntrollerTestMethod(){
+        WOD_2__Business_Category_Configuration__c bcc = WOD_TestDataFactory.createBusinessCategoryConfig('Roofing');
+        insert bcc;
+        WOD_2__Warranty_Registration__c wr = WOD_TestDataFactory.createWarrantyRegistration('Residential','Roofing');
+        insert wr;
+        WOD_Warranty_Transfer__c wt = WOD_TestDataFactory.createWarrantyTransfer('Residential','Roofing');
+        insert wt;
+        WOD_CTWRInternalController.mailingSectionWrapper wm = new WOD_CTWRInternalController.mailingSectionWrapper();
+        wm.firstName ='Test';
+        wm.lastName ='Test';
+        wm.address1 ='sdde';
+        wm.address2 ='sss';
+        wm.cityName ='addd';
+        wm.state='Florida (FL)';
+        wm.postalCode ='201308';
+        wm.country ='United States';
+        wm.emailVal='aaa@mail.com';
+        wm.phoneVal ='9999999999';
+        wm.organizationMailing ='aaa';
+        wm.IsNewConstructionMailingAddress = 'true';
+        WOD_CTWRInternalController.buildingSectionWrapper wb = new WOD_CTWRInternalController.buildingSectionWrapper();
+        wb.selectedPropertyType ='Residential';
+        wb.selectedBuildingType ='Other';
+        wb.organizationBuilding ='Tavant';
+        wb.firstName ='ddd';
+        wb.lastName ='jfkf';
+        wb.address1 ='wrr';
+        wb.address2 ='ww';
+        wb.cityName ='sss';
+        wb.state ='Florida (FL)';
+        wb.postalCode ='201308';
+        wb.country ='United States';
+        wb.IsNewConstruction='true';
+        WOD_CTWRInternalController.productInformationSectionWrapper wp = new WOD_CTWRInternalController.productInformationSectionWrapper();
+        wp.selectedInstallDate =String.ValueOf(System.today());
+        wp.selectedTransferDate=String.ValueOf(System.today());
+        wp.selectedProductGroup ='Solar';
+        wp.productDetailVal='details';
+        wp.productUnitOfmeasure='LB';
+        wp.selectedInstallationLoc ='Other';
+        wp.otherInstallationLocation='other';
+        wp.selectedRegistrationDate=String.ValueOf(System.today());
+        
+        WOD_CTWRInternalController.getInstallLocationPicklistValuesWT('Roofing');
+        WOD_CTWRInternalController.getInstallLocationPicklistValuesWT('Siding');
+        WOD_CTWRInternalController.WRegRecordType();
+        WOD_CTWRInternalController.WTegRecordType();
+        WOD_CTWRInternalController.getSalesOrgPickList();
+        WOD_CTWRInternalController.getBCCRecords('Siding');
+        WOD_CTWRInternalController.getWTInformation(wt.Id);
+        WOD_CTWRInternalController.getWRInformation(wr.Id);
+        WOD_CTWRInternalController.WRSubmit(wm,wb,wp,'Residential','Roofing','',false,'');
+        WOD_CTWRInternalController.WTSubmit(wm,wb,wp,'Residential','Roofing',false,'');
+    }
+    /**
+     * @description data set up and execution
+    */
+    public static testmethod void internalCOntrollerTestMethod2(){
+        WOD_2__Business_Category_Configuration__c bcc = WOD_TestDataFactory.createBusinessCategoryConfig('Roofing');
+        insert bcc;
+        WOD_2__Warranty_Registration__c wr = WOD_TestDataFactory.createWarrantyRegistration('Residential','Roofing');
+        insert wr;
+        WOD_Warranty_Transfer__c wt = WOD_TestDataFactory.createWarrantyTransfer('Residential','Roofing');
+        insert wt;
+        WOD_CTWRInternalController.mailingSectionWrapper wm = new WOD_CTWRInternalController.mailingSectionWrapper();
+        wm.firstName ='Test';
+        wm.lastName ='Test';
+        wm.address1 ='sdde';
+        wm.address2 ='sss';
+        wm.cityName ='addd';
+        wm.state='Florida (FL)';
+        wm.postalCode ='201308';
+        wm.country ='United States';
+        wm.emailVal='aaa@mail.com';
+        wm.phoneVal ='9999999999';
+        wm.organizationMailing ='aaa';
+        wm.IsNewConstructionMailingAddress = 'true';
+        WOD_CTWRInternalController.buildingSectionWrapper wb = new WOD_CTWRInternalController.buildingSectionWrapper();
+        wb.selectedPropertyType ='Residential';
+        wb.selectedBuildingType ='Other';
+        wb.organizationBuilding ='Tavant';
+        wb.firstName ='ddd';
+        wb.lastName ='jfkf';
+        wb.address1 ='wrr';
+        wb.address2 ='ww';
+        wb.cityName ='sss';
+        wb.state ='Florida (FL)';
+        wb.postalCode ='201308';
+        wb.country ='United States';
+        wb.IsNewConstruction='true';
+        WOD_CTWRInternalController.productInformationSectionWrapper wp = new WOD_CTWRInternalController.productInformationSectionWrapper();
+        wp.selectedInstallDate =String.ValueOf(System.today());
+        wp.selectedTransferDate=String.ValueOf(System.today());
+        wp.selectedProductGroup ='Solar';
+        wp.productDetailVal='details';
+        wp.productUnitOfmeasure='LB';
+        wp.selectedInstallationLoc ='Other';
+        wp.otherInstallationLocation='other';
+        wp.selectedRegistrationDate=String.ValueOf(System.today());
+        
+        WOD_CTWRInternalController.WRSubmit(wm,wb,wp,'Residential','Roofing','',true,wr.id);
+        WOD_CTWRInternalController.WTSubmit(wm,wb,wp,'Residential','Roofing',true,wt.Id);
+    }
+    
+    public static testmethod void internalCOntrollerTestMethod3(){
+        WOD_2__Business_Category_Configuration__c bcc = WOD_TestDataFactory.createBusinessCategoryConfig('Roofing');
+        insert bcc;
+        WOD_2__Warranty_Registration__c wr = WOD_TestDataFactory.createWarrantyRegistrationroofing('Residential','Roofing');
+        insert wr;
+        WOD_Warranty_Transfer__c wt = WOD_TestDataFactory.createWarrantyTransfer('Residential','Roofing');
+        insert wt;
+        WOD_CTWRInternalController.mailingSectionWrapper wm = new WOD_CTWRInternalController.mailingSectionWrapper();
+        wm.firstName ='Test';
+        wm.lastName ='Test';
+        wm.address1 ='sdde';
+        wm.address2 ='sss';
+        wm.cityName ='addd';
+        wm.state='Florida (FL)';
+        wm.postalCode ='201308';
+        wm.country ='United States';
+        wm.emailVal='aaa@mail.com';
+        wm.phoneVal ='9999999999';
+        wm.organizationMailing ='aaa';
+        wm.IsNewConstructionMailingAddress = 'true';
+        WOD_CTWRInternalController.buildingSectionWrapper wb = new WOD_CTWRInternalController.buildingSectionWrapper();
+        wb.selectedPropertyType ='Residential';
+        wb.selectedBuildingType ='Other';
+        wb.organizationBuilding ='Tavant';
+        wb.firstName ='ddd';
+        wb.lastName ='jfkf';
+        wb.address1 ='wrr';
+        wb.address2 ='ww';
+        wb.cityName ='sss';
+        wb.state ='Florida (FL)';
+        wb.postalCode ='201308';
+        wb.country ='United States';
+        wb.IsNewConstruction='true';
+        WOD_CTWRInternalController.productInformationSectionWrapper wp = new WOD_CTWRInternalController.productInformationSectionWrapper();
+        wp.selectedInstallDate =String.ValueOf(System.today());
+        wp.selectedProductGroup ='Solar';
+        wp.productDetailVal='details';
+        wp.productUnitOfmeasure='LB';
+        wp.selectedInstallationLoc ='Other';
+        wp.otherInstallationLocation='other';
+        wp.selectedRegistrationDate=String.ValueOf(System.today());
+        
+        WOD_CTWRInternalController.WRSubmit(wm,wb,wp,'Residential','Roofing','',true,wr.id);
+        WOD_CTWRInternalController.WTSubmit(wm,wb,wp,'Residential','Roofing',true,wt.Id);
+    }
+     public static testmethod void internalCOntrollerTestMethodsolar(){
+        WOD_2__Business_Category_Configuration__c bcc = WOD_TestDataFactory.createBusinessCategoryConfig('Solar Solutions');
+        insert bcc;
+        WOD_2__Warranty_Registration__c wr = WOD_TestDataFactory.createWarrantyRegistrationsolar('Residential','Solar Solutions');
+        insert wr;
+        WOD_2__Warranty_Registration__c wrrr = WOD_TestDataFactory.createWarrantyRegistrationroofing('Residential','Roofing');
+        insert wrrr;
+        WOD_2__Warranty_Registration__c wrsid = WOD_TestDataFactory.createWarrantyRegistrationsiding('Residential','Siding');
+        insert wrsid;
+        WOD_2__Warranty_Registration__c wrsid1 = WOD_TestDataFactory.createWarrantyRegistrationsiding1('Residential','Siding');
+        insert wrsid1;
+        WOD_2__Warranty_Registration__c wrsid2 = WOD_TestDataFactory.createWarrantyRegistrationsiding2('Residential','Siding');
+        insert wrsid2;
+        WOD_2__Warranty_Registration__c wrsid3 = WOD_TestDataFactory.createWarrantyRegistrationsiding3('Residential','Siding');
+        insert wrsid3;
+        WOD_2__Warranty_Registration__c wrsid4 = WOD_TestDataFactory.createWarrantyRegistrationsiding4('Residential','Siding');
+        insert wrsid4;
+        WOD_2__Warranty_Registration__c wrsid5 = WOD_TestDataFactory.createWarrantyRegistrationsiding5('Residential','Siding');
+        insert wrsid5;
+        WOD_2__Warranty_Registration__c wrcbi = WOD_TestDataFactory.createWarrantyRegistrationCBI('Residential','Commercial Building & Infrastructure');
+        insert wrcbi;
+        WOD_Warranty_Transfer__c wt = WOD_TestDataFactory.createWarrantyTransfersolar('Residential','Solar Solutions');
+        insert wt;
+        WOD_CTWRInternalController.mailingSectionWrapper wm = new WOD_CTWRInternalController.mailingSectionWrapper();
+        wm.firstName ='Test';
+        wm.lastName ='Test';
+        wm.address1 ='sdde';
+        wm.address2 ='sss';
+        wm.cityName ='addd';
+        wm.state='Florida (FL)';
+        wm.postalCode ='201308';
+        wm.country ='United States';
+        wm.emailVal='aaa@mail.com';
+        wm.phoneVal ='9999999999';
+        wm.organizationMailing ='aaa';
+        wm.IsNewConstructionMailingAddress = 'true';
+        WOD_CTWRInternalController.buildingSectionWrapper wb = new WOD_CTWRInternalController.buildingSectionWrapper();
+        wb.selectedPropertyType ='Residential';
+        wb.selectedBuildingType ='Other';
+        wb.organizationBuilding ='Tavant';
+        wb.firstName ='ddd';
+        wb.lastName ='jfkf';
+        wb.address1 ='wrr';
+        wb.address2 ='ww';
+        wb.cityName ='sss';
+        wb.state ='Florida (FL)';
+        wb.postalCode ='201308';
+        wb.country ='United States';
+        wb.IsNewConstruction='true';
+        WOD_CTWRInternalController.productInformationSectionWrapper wp = new WOD_CTWRInternalController.productInformationSectionWrapper();
+        wp.selectedInstallDate =String.ValueOf(System.today());
+        wp.selectedProductGroup ='Solar';
+        wp.productDetailVal='details';
+        wp.productUnitOfmeasure='LB';
+        wp.selectedInstallationLoc ='Other';
+        wp.otherInstallationLocation='other';
+        wp.selectedRegistrationDate=String.ValueOf(System.today());
+        
+        WOD_CTWRInternalController.WRSubmit(wm,wb,wp,'Residential','Solar Solutions','',true,wr.id);
+        WOD_CTWRInternalController.WTSubmit(wm,wb,wp,'Residential','Solar Solutions',true,wt.Id);
+    }
+
+}
