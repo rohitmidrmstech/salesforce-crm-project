@@ -1,0 +1,1 @@
+public class WOD_IntegrationException extends Exception{}

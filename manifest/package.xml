@@ -5,7 +5,7 @@
         <name>ApexClass</name>
     </types>
      <types>
-        <members>*</members>
+        <members>contactCardActiveDetails</members>
         <name>LightningComponentBundle</name>
     </types>
     <version>63.0</version>
