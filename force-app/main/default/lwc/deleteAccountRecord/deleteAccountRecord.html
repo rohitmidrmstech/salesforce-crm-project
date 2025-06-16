@@ -1,0 +1,19 @@
+<template>
+ <lightning-card title ="delete account record without server side" >
+<div class ="slds-p-around_medium">
+<template if:true={accounts}>
+<template for:each={accounts} for:item="acc">
+<lightning-layout key ={acc.Id}>
+<lightning-layout-item flexibility="grow">
+    {acc.Name}
+</lightning-layout-item>
+<lightning-layout-item flexibility="grow">
+<lightning-button-icon icon-name="utility:delete" onclick={deleteAccount} data-recordid ={acc.Id}>
+</lightning-button-icon>
+</lightning-layout-item>
+</lightning-layout>
+</template>
+</template>
+</div>
+ </lightning-card>  
+</template>
