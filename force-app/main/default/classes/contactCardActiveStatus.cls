@@ -7,6 +7,7 @@ public class contactCardActiveStatus {
     ORDER BY CreatedDate DESC
     LIMIT 10
 ];  
+System.debug('return recent contacts');
     }  
     
 
