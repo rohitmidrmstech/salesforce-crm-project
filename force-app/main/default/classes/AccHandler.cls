@@ -7,7 +7,7 @@ public class AccHandler {
                         User UserList = [Select Id,Name,LastName from USER where Name =: 'rohit chormalle'];
                    acc.OwnerId = UserList.LastName;
                 lstac.add(acc);
-                system.debug('ownerd id >>'+UserList.id );
+                system.debug('ownerd id new changes >>'+UserList.id );
                 }
             }
         update lstac;
