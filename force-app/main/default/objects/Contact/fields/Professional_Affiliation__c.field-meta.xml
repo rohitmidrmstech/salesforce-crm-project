@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Professional_Affiliation__c</fullName>
+    <description>Professional societies or trade groups to which this contact belongs.</description>
+    <inlineHelpText>Enter zero, one, or more professional societies or trade groups to which this contact belongs.</inlineHelpText>
+    <label>Professional Affiliation</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AIA</fullName>
+                <default>false</default>
+                <label>AIA</label>
+            </value>
+            <value>
+                <fullName>ASHRAE</fullName>
+                <default>false</default>
+                <label>ASHRAE</label>
+            </value>
+            <value>
+                <fullName>AWCI</fullName>
+                <default>false</default>
+                <label>AWCI</label>
+            </value>
+            <value>
+                <fullName>BIBCA</fullName>
+                <default>false</default>
+                <label>BIBCA</label>
+            </value>
+            <value>
+                <fullName>CSI</fullName>
+                <default>false</default>
+                <label>CSI</label>
+            </value>
+            <value>
+                <fullName>ICAA</fullName>
+                <default>false</default>
+                <label>ICAA</label>
+            </value>
+            <value>
+                <fullName>LEED AP</fullName>
+                <default>false</default>
+                <label>LEED AP</label>
+            </value>
+            <value>
+                <fullName>Local HBA</fullName>
+                <default>false</default>
+                <label>Local HBA</label>
+            </value>
+            <value>
+                <fullName>NAHB</fullName>
+                <default>false</default>
+                <label>NAHB</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

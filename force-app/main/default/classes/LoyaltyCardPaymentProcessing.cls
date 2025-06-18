@@ -7,6 +7,9 @@ and Change Pays (CP) Program.
 
 Change Log:
 2/15/2024 - Lou Bui - Added automation controller to enable / disable records from being created/queried/updated.
+06/05/2025 - Hithesh Ravuri - Modified the batch class to handle the for the BP Canada Contractor Cashback program.
+06/06/2025 - Hithesh Ravuri - Modified the class to provide list of contacts which needs to be updated if wrong method is 
+called by the external system.
 *****************************************************************************************/
 
 global with sharing class LoyaltyCardPaymentProcessing {
@@ -297,12 +300,12 @@ global with sharing class LoyaltyCardPaymentProcessing {
                         
                         System.debug(e);
                         
-                            String[] toAddress = new String[]{System.Label.BH_Error_Email_Contact};
+                        String[] toAddress = new String[]{System.Label.BH_Error_Email_Contact};
                             String subject = 'Error with DML operation for LoyaltyCardPaymentProcessing';
-                            String body = 'Error with DML operation for LoyaltyCardPaymentProcessing updateCardOrderInfo. Error: ' + e;
-                       
+                        String body = 'Error with DML operation for LoyaltyCardPaymentProcessing updateCardOrderInfo. Error: ' + e;
+                        
                         if(!Test.isRunningTest()){
-                        	EmailUtil.sendMessage(toAddress, body,subject);
+                            EmailUtil.sendMessage(toAddress, body,subject);
                         }
                         
                     }
@@ -1097,7 +1100,9 @@ global with sharing class LoyaltyCardPaymentProcessing {
         Automation_Controller__c automationController = Automation_Controller__c.getInstance();
         if(automationController != null && automationController.LoyaltyAutomatedPaymentProcessing__c){
             Map<String,Date> mapshipmentDetails = new Map<String,Date>();
-            
+            set<string> contactNames = new set<string>();
+            set<string> BHOrderNumber = new set<string>();
+            integer counter = 0;
             for(CompleteOrderInfo record : shipmentDetails){
                 mapshipmentDetails.put(record.Name, record.CompleteDate);
             }
@@ -1106,16 +1111,24 @@ global with sharing class LoyaltyCardPaymentProcessing {
                                                                         Name,Rebate_Claim__c,
                                                                         BH_Order_Number__c,
                                                                         BH_Order_Status__c,
-                                                                        Bank_Payment_Date__c
+                                                                        Bank_Payment_Date__c,
+                                                                        Contact_Card_Active__c,
+                                                                        Contact__c,
+                                                                        Contact__r.Name
                                                                         FROM Loyalty_Card_Payment_Detail__c
                                                                         WHERE Name IN :mapshipmentDetails.keyset() AND Bank_Payment_Date__c = NULL AND BH_Order_Status__c = 'ORDERSUBMITTED'];
             
             if(lstOpenOrderDetails.size() > 0){
                 try {
                     for(Loyalty_Card_Payment_Detail__c item : lstOpenOrderDetails){
-                        item.BH_Order_Status__c = 'COMPLETE';
-                        item.Bank_Payment_Date__c = mapshipmentDetails.get(item.Name);
-                        
+                        if(item.Contact_Card_Active__c){
+                            item.BH_Order_Status__c = 'COMPLETE';
+                            item.Bank_Payment_Date__c = mapshipmentDetails.get(item.Name);
+                            counter++;
+                        } else{
+                            contactNames.add(item.Contact__r.Name);
+                            BHOrderNumber.add(item.BH_Order_Number__c);
+                        }
                     }
                     
                     update lstOpenOrderDetails;
@@ -1124,16 +1137,29 @@ global with sharing class LoyaltyCardPaymentProcessing {
                     Map<String,Date> uniqueRebateClaimData = new Map<String,Date>();
                     
                     For(Loyalty_Card_Payment_Detail__c r:lstOpenOrderDetails){
-                        uniqueRebateClaimData.put(r.Rebate_Claim__c, r.Bank_Payment_Date__c);
+                        if(r.Contact_Card_Active__c){
+                            uniqueRebateClaimData.put(r.Rebate_Claim__c, r.Bank_Payment_Date__c);
+                        } else{
+                            contactNames.add(r.Contact__r.Name);
+                            BHOrderNumber.add(r.BH_Order_Number__c);
+                        }
                     }
                     //system.debug('uniqueRebateClaimData => ' + uniqueRebateClaimData);
                     //start update Rebate Claim
-                    LoyaltyRebateClaimBatchUpdate objbatch = new LoyaltyRebateClaimBatchUpdate(uniqueRebateClaimData);
-                    Database.executeBatch(objbatch, 200);
+                    if(!uniqueRebateClaimData.isempty()){
+                        LoyaltyRebateClaimBatchUpdate objbatch = new LoyaltyRebateClaimBatchUpdate(uniqueRebateClaimData);
+                        Database.executeBatch(objbatch, 200);
+                    }
                     //end update Rebate Claim
                     
+                    if(contactNames.size()>0){
+                        String[] toAddress = new String[]{System.Label.BH_Error_Email_Contact};
+                            String subject = 'Contact card is not active but rebate claims came for the claim payment';
+                        String body = '	List of contact names whose claims are getting updated without card active is' + contactNames + '. The BH order number for this order is - ' + BHOrderNumber;
+                        EmailUtil.sendMessage(toAddress, body,subject);
+                    }
                     
-                    return 'SUCCESS: ' + lstOpenOrderDetails.size() + ' UPDATED';
+                    return 'SUCCESS: ' + counter + ' UPDATED';
                     
                 } catch(Exception e) {
                     

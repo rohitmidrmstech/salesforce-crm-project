@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Category__c</fullName>
+    <description>What Category does this Contact fall into?</description>
+    <inlineHelpText>What Category does this Contact fall into?</inlineHelpText>
+    <label>Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Architect</fullName>
+                <default>false</default>
+                <label>Architect</label>
+            </value>
+            <value>
+                <fullName>BPCS</fullName>
+                <default>false</default>
+                <label>BPCS</label>
+            </value>
+            <value>
+                <fullName>Builder</fullName>
+                <default>false</default>
+                <label>Builder</label>
+            </value>
+            <value>
+                <fullName>Deck Builder</fullName>
+                <default>false</default>
+                <label>Deck Builder</label>
+            </value>
+            <value>
+                <fullName>Direct Dealer Salesman</fullName>
+                <default>false</default>
+                <label>Direct Dealer Salesman</label>
+            </value>
+            <value>
+                <fullName>Distributor</fullName>
+                <default>false</default>
+                <label>Distributor</label>
+            </value>
+            <value>
+                <fullName>Distributor Buyer</fullName>
+                <default>false</default>
+                <label>Distributor Buyer</label>
+            </value>
+            <value>
+                <fullName>Distributor Owner</fullName>
+                <default>false</default>
+                <label>Distributor Owner</label>
+            </value>
+            <value>
+                <fullName>Distributor Salesman</fullName>
+                <default>false</default>
+                <label>Distributor Salesman</label>
+            </value>
+            <value>
+                <fullName>Fence Distributor Branch Manager</fullName>
+                <default>false</default>
+                <label>Fence Distributor Branch Manager</label>
+            </value>
+            <value>
+                <fullName>Fence Builder</fullName>
+                <default>false</default>
+                <label>Fence Builder</label>
+            </value>
+            <value>
+                <fullName>Fence Direct Dealer</fullName>
+                <default>false</default>
+                <label>Fence Direct Dealer</label>
+            </value>
+            <value>
+                <fullName>Fence Direct Dealer Salesman</fullName>
+                <default>false</default>
+                <label>Fence Direct Dealer Salesman</label>
+            </value>
+            <value>
+                <fullName>Fence Distributor</fullName>
+                <default>false</default>
+                <label>Fence Distributor</label>
+            </value>
+            <value>
+                <fullName>Fence Distributor Inside Sales</fullName>
+                <default>false</default>
+                <label>Fence Distributor Inside Sales</label>
+            </value>
+            <value>
+                <fullName>Fence Distributor Salesmen</fullName>
+                <default>false</default>
+                <label>Fence Distributor Salesmen</label>
+            </value>
+            <value>
+                <fullName>Fence Landscape Architect</fullName>
+                <default>false</default>
+                <label>Fence Landscape Architect</label>
+            </value>
+            <value>
+                <fullName>Fence Lumberyard</fullName>
+                <default>false</default>
+                <label>Fence Lumberyard</label>
+            </value>
+            <value>
+                <fullName>General Contractor</fullName>
+                <default>false</default>
+                <label>General Contractor</label>
+            </value>
+            <value>
+                <fullName>Installer</fullName>
+                <default>false</default>
+                <label>Installer</label>
+            </value>
+            <value>
+                <fullName>Lumberyard</fullName>
+                <default>false</default>
+                <label>Lumberyard</label>
+            </value>
+            <value>
+                <fullName>Lumberyard Buyer</fullName>
+                <default>false</default>
+                <label>Lumberyard Buyer</label>
+            </value>
+            <value>
+                <fullName>Lumberyard Owner</fullName>
+                <default>false</default>
+                <label>Lumberyard Owner</label>
+            </value>
+            <value>
+                <fullName>Lumberyard Salesman</fullName>
+                <default>false</default>
+                <label>Lumberyard Salesman</label>
+            </value>
+            <value>
+                <fullName>Pull Thru Dealer</fullName>
+                <default>false</default>
+                <label>Pull Thru Dealer</label>
+            </value>
+            <value>
+                <fullName>Pull Thru Dealer Salesman</fullName>
+                <default>false</default>
+                <label>Pull Thru Dealer Salesman</label>
+            </value>
+            <value>
+                <fullName>Remodeler</fullName>
+                <default>false</default>
+                <label>Remodeler</label>
+            </value>
+            <value>
+                <fullName>Fence Branch Manager</fullName>
+                <default>false</default>
+                <label>Fence Branch Manager</label>
+            </value>
+            <value>
+                <fullName>Deck Builders</fullName>
+                <default>false</default>
+                <label>Deck Builders</label>
+            </value>
+            <value>
+                <fullName>Fence Branch Managers</fullName>
+                <default>false</default>
+                <label>Fence Branch Managers</label>
+            </value>
+            <value>
+                <fullName>Fence Homeowners Association</fullName>
+                <default>false</default>
+                <label>Fence Homeowners Association</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

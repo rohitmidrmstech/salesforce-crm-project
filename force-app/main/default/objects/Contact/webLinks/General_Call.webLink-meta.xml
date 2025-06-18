@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>General_Call</fullName>
+    <availability>online</availability>
+    <description>Use this link to go directly to General Call</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>General Call</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/500/e?retURL=%2F500%2Fo&amp;RecordType=012700000001AAi&amp;_CONFIRMATIONTOKEN=l9kuAFT91s._pK2K_q8WOJGpY8dDZOHrQG3nGlCZN6K6rFoS7EFDKpX1v9UmpfeHxiOEUq8q3YURIXiMKlySUCT6k1_vasNXH0FNpEyMb2oz5lRhx7qE.LdV8qFm_lnhl4tKCVHxWNMQZ.WrpR.mVEeAGhLM_1vSCMpTSBPxiul62ZJj&amp;cancelURL=%2F500%2Fo&amp;ent=Case
+&amp;cas4_lkid={!Account.Id} 
+&amp;cas4={!Account.Name} 
+&amp;cas3_lkid={!Contact.Id} 
+&amp;cas3={!Contact.Name}</url>
+</WebLink>

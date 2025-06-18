@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Unisul_Plant_Contacts</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>CONTACT.TITLE</columns>
+    <columns>Function__c</columns>
+    <columns>CONTACT.PHONE1</columns>
+    <columns>CONTACT.ADDRESS2_STREET</columns>
+    <columns>CONTACT.ADDRESS2_CITY</columns>
+    <columns>CONTACT.ADDRESS2_STATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.NAME</field>
+        <operation>equals</operation>
+        <value>Certainteed Insulation Group</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Active</value>
+    </filters>
+    <filters>
+        <field>CONTACT.ADDRESS2_STATE</field>
+        <operation>equals</operation>
+        <value>FL</value>
+    </filters>
+    <label>Unisul Plant Contacts</label>
+    <sharedTo>
+        <role>PlanningTrafficWarehousingQuality</role>
+        <role>SupplyChainOrderMgmtCustSvcMgmt</role>
+        <role>SupplyChainOrderMgmtCustSvcRep</role>
+        <role>SupplyChainOrderMgmtFeedbackSpec</role>
+        <role>SupplyChainOrderMgmtSystemsAdmin</role>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Function__c</fullName>
+    <description>Required for CTI/Alcatel Integration</description>
+    <inlineHelpText>Required for CTI/Alcatel Integration</inlineHelpText>
+    <label>Function</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>OM Contact</fullName>
+                <default>true</default>
+                <label>OM Contact</label>
+            </value>
+            <value>
+                <fullName>Telemar</fullName>
+                <default>false</default>
+                <label>Telemar</label>
+            </value>
+            <value>
+                <fullName>Accounting/Finance</fullName>
+                <default>false</default>
+                <label>Accounting/Finance</label>
+            </value>
+            <value>
+                <fullName>Accounts Payable</fullName>
+                <default>false</default>
+                <label>Accounts Payable</label>
+            </value>
+            <value>
+                <fullName>Company Communications</fullName>
+                <default>false</default>
+                <label>Company Communications</label>
+            </value>
+            <value>
+                <fullName>Credit Contact</fullName>
+                <default>false</default>
+                <label>Credit Contact</label>
+            </value>
+            <value>
+                <fullName>Legal</fullName>
+                <default>false</default>
+                <label>Legal</label>
+            </value>
+            <value>
+                <fullName>Locator</fullName>
+                <default>false</default>
+                <label>Locator</label>
+            </value>
+            <value>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+                <label>Marketing</label>
+            </value>
+            <value>
+                <fullName>Operations</fullName>
+                <default>false</default>
+                <label>Operations</label>
+            </value>
+            <value>
+                <fullName>Price Increase Communications</fullName>
+                <default>false</default>
+                <label>Price Increase Communications</label>
+            </value>
+            <value>
+                <fullName>Pricing</fullName>
+                <default>false</default>
+                <label>Pricing</label>
+            </value>
+            <value>
+                <fullName>Principle</fullName>
+                <default>false</default>
+                <label>Principle</label>
+            </value>
+            <value>
+                <fullName>Project/Technical/R&amp;D</fullName>
+                <default>false</default>
+                <label>Project/Technical/R&amp;D</label>
+            </value>
+            <value>
+                <fullName>ProTeam</fullName>
+                <default>false</default>
+                <label>ProTeam</label>
+            </value>
+            <value>
+                <fullName>Purchasing</fullName>
+                <default>false</default>
+                <label>Purchasing</label>
+            </value>
+            <value>
+                <fullName>Rebate</fullName>
+                <default>false</default>
+                <label>Rebate</label>
+            </value>
+            <value>
+                <fullName>Sales</fullName>
+                <default>false</default>
+                <label>Sales</label>
+            </value>
+            <value>
+                <fullName>Tax</fullName>
+                <default>false</default>
+                <label>Tax</label>
+            </value>
+            <value>
+                <fullName>Warehouse</fullName>
+                <default>false</default>
+                <label>Warehouse</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

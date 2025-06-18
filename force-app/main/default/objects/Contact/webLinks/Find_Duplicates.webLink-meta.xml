@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Find_Duplicates</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Find Duplicates</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/_ui/search/ui/UnifiedSearchResults?searchType=2&amp;str=
+{!IF(  ISNULL(Contact.Phone) ,&apos;&apos;,Contact.Phone &amp;&apos; or &apos; )}
+{!IF(  ISNULL(Contact.MobilePhone) ,&apos;&apos;,Contact.MobilePhone &amp;&apos; or &apos; )}
+{!Contact.FirstName}+{!Contact.LastName}</url>
+</WebLink>

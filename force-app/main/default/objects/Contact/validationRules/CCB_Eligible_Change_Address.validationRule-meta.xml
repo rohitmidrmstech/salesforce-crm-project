@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCB_Eligible_Change_Address</fullName>
+    <active>true</active>
+    <description>Validation rule will trigger when &quot;Eligible&quot; is populated in the CCB Eligibility field and anyone except Loyalty users attempt to edit.</description>
+    <errorConditionFormula>AND(
+    ISPICKVAL(CCB_Eligibility__c,&quot;Eligible&quot;),  
+    NOT(ISNEW()),
+    OR(ISCHANGED(MailingAddress),
+       ISCHANGED(Email)),
+    
+    NOT(
+     OR($Profile.Name = &apos;Loyalty&apos;,
+     $Profile.Name = &apos;System Administrator&apos;,
+     $Profile.Name = &apos;Integration User&apos;, $User.Id = &quot;0053w000009M7mN&quot;, $User.Id = &quot;0053w000007x4rB&quot;)
+)
+ )</errorConditionFormula>
+    <errorMessage>You cannot change the email address or mailing address of a contact that is currently eligible for Contractor Cash Back. To change the address, please click the &quot;Submit for Approval&quot; button and enter the new address in the comments.</errorMessage>
+</ValidationRule>

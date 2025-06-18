@@ -179,8 +179,9 @@ public class TransactionJournalCreatorForRebateClaims {
                                                      AND ProgramRebateTypeId IN :setprogramrebatetypeid 
                                                      AND ProductId IN :setproducts 
                                                      AND (EffectiveStartDate <= :setofdates
-                                                          AND  EffectiveEndDate >= :setofdates) 
-                                                     AND Product_Category__c IN:setproductcategory])
+                                                     AND  EffectiveEndDate >= :setofdates) 
+                                                     AND Product_Category__c IN:setproductcategory
+                                                    ])
                 {
                     benefitkey = '';
                     // created benefitkey to check the type of benefit record(Regular,promo) and use it for further processing.
@@ -196,10 +197,11 @@ public class TransactionJournalCreatorForRebateClaims {
                  * Querying UnitOfMeasureConversion records that belong to specific programs ('CCB' or 'BSP;CCB')
                  * and have a Product__c field value matching any value in the setproducts( this products Id from rebate line Items) collection.
                  */
-                for(UnitOfMeasureConversion uom : [SELECT Product__c,FromUnitOfMeasureId,ToUnitOfMeasureId,ConversionFactor,Applicable_Program__c,Program_Year__c 
+                for(UnitOfMeasureConversion uom : [SELECT Product__c,FromUnitOfMeasureId,ToUnitOfMeasureId ,ConversionFactor,Applicable_Program__c,Program_Year__c 
                                                    FROM UnitOfMeasureConversion
                                                    WHERE (Applicable_Program__c = 'CCB' OR Applicable_Program__c = 'BSP;CCB') 
-                                                   AND Product__c IN :setproducts])
+                                                   AND Product__c IN :setproducts
+                                                 ])
                 {
                     unitKey= '';
                     if (String.isNotBlank(uom.Applicable_Program__c)) {

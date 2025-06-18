@@ -7,6 +7,7 @@ and Change Pays (CP) Program.
 
 Change Log:
 2/15/2024 - Lou Bui - Added automation controller to enable / disable records from being created/queried/updated.
+06/05/2025 - Hithesh Ravuri - Modified the batch class to handle the for the BP Canada Contractor Cashback program.
 *****************************************************************************************/
 
 global class LoyaltyCardPaymentLoadBatch implements Database.Batchable<sObject>,Schedulable {

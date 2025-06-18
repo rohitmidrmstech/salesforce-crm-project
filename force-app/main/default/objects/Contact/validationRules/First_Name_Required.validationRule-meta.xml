@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>First_Name_Required</fullName>
+    <active>true</active>
+    <description>Validation rule to require the first name on all new contacts.</description>
+    <errorConditionFormula>AND(
+RecordType.Name = &apos;CertainTeed Contact&apos;,
+
+ISBLANK(FirstName)
+)</errorConditionFormula>
+    <errorMessage>Please enter a first name.</errorMessage>
+</ValidationRule>

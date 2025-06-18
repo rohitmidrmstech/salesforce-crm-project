@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bob_H_s_Arch_ON_as_of_August_6_2015</fullName>
+    <booleanFilter>1 AND 2 AND 3</booleanFilter>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CONTACT.FIRST_NAME</columns>
+    <columns>CONTACT.LAST_NAME</columns>
+    <columns>Architect_Role__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CONTACT.ADDRESS2_CITY</field>
+        <operation>notEqual</operation>
+        <value>Ottawa</value>
+    </filters>
+    <filters>
+        <field>Architect_Role__c</field>
+        <operation>contains</operation>
+        <value>Contract Administrator,Associate,Engineer,Interior Designer,Principal,Proje,Ass</value>
+    </filters>
+    <filters>
+        <field>CONTACT.ADDRESS2_STATE</field>
+        <operation>contains</operation>
+        <value>ON</value>
+    </filters>
+    <label>Bob H&apos;s Arch ON as of August 6, 2015</label>
+    <sharedTo>
+        <group>All_Gypsum_Canada</group>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CT_Event_history__c</fullName>
+    <inlineHelpText>Example:
+&quot;2008 Requested invitation to Masters&quot;
+&quot;2007 Invited to Totem - Accepted&quot;
+&quot;2006 Invited to Masters - Declined&quot;</inlineHelpText>
+    <label>CT Event History &amp; Requests</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

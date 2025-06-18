@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NPS_and_Refusals</fullName>
+    <booleanFilter>1 or 2</booleanFilter>
+    <columns>FULL_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Most_Recent_NPS_Score__c</columns>
+    <columns>Call_Attempt__c</columns>
+    <columns>Call_Attempt_Description__c</columns>
+    <columns>Last_Modified_Call_Attempt__c</columns>
+    <columns>Account.Last_Survey_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Most_Recent_NPS_Score__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Call_Attempt_Description__c</field>
+        <operation>equals</operation>
+        <value>Hard Refusal</value>
+    </filters>
+    <label>Contacts with NPS/Refusals</label>
+    <sharedTo>
+        <role>CertainTeed_Mgmt_View_All_Data</role>
+    </sharedTo>
+</ListView>

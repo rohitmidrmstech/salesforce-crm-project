@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OK_to_share_pricing__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Defaults to unchecked; check if it&apos;s OK for this contact to know pricing.</inlineHelpText>
+    <label>OK to share pricing/invoice?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

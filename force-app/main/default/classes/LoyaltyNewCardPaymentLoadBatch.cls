@@ -10,6 +10,7 @@ Change Log:
 05/07/2025 - Hithesh Ravuri - Modified the batch class to use Database.Stateful because it was creating duplicate 
 							  records when the same contact appeared in multiple batches. By enabling stateful mode, 
 							  we can retain state across batches and ensure only one unique record is created per contact.
+06/05/2025 - Hithesh Ravuri - Modified the batch class to handle the for the BP Canada Contractor Cashback program.
 *****************************************************************************************/
 
 global class LoyaltyNewCardPaymentLoadBatch implements Database.Batchable<sObject>,Schedulable,Database.Stateful {

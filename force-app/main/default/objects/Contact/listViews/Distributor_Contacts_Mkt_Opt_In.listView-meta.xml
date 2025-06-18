@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Distributor_Contacts_Mkt_Opt_In</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>NPS_Email_Test_Rec__c</columns>
+    <columns>Distance_To_Plant__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>LastSurveyDate__c</columns>
+    <columns>CONTACT.PHONE1</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>CONTACT.CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CONTACT.EMAIL</field>
+        <operation>equals</operation>
+        <value>derek.bissett@saint-gobain.com,tara.a.durante@saint-gobain.com,Nancy.T.OConnor@saint-gobain.com</value>
+    </filters>
+    <label>Distributor Contacts - Mkt Opt In</label>
+</ListView>

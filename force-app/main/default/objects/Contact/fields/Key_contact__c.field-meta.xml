@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Key_contact__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Check the box if this person is the key or main contact for the account.</description>
+    <inlineHelpText>Check the box if this person is the key or main contact for the account.</inlineHelpText>
+    <label>Key contact</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

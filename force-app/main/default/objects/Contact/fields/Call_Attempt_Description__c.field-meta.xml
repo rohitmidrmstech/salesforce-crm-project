@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Call_Attempt_Description__c</fullName>
+    <description>Wrong # drops off list, Hard refusal: drops off list, soft refusal drops off 3 months, left voicemail is 48 hours and email is 1 week</description>
+    <inlineHelpText>Wrong # drops off list, Hard refusal: drops off list, soft refusal drops off 3 months, left voicemail is 48 hours and email is 1 week</inlineHelpText>
+    <label>Call Attempt Description</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Call_Attempt__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Call_Attempt_Description</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>C1</controllingFieldValue>
+            <controllingFieldValue>C2</controllingFieldValue>
+            <controllingFieldValue>C3</controllingFieldValue>
+            <controllingFieldValue>C4</controllingFieldValue>
+            <controllingFieldValue>C5</controllingFieldValue>
+            <valueName>Wrong Number</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>C1</controllingFieldValue>
+            <controllingFieldValue>C2</controllingFieldValue>
+            <controllingFieldValue>C3</controllingFieldValue>
+            <controllingFieldValue>C4</controllingFieldValue>
+            <controllingFieldValue>C5</controllingFieldValue>
+            <valueName>Left Voicemail</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>C1</controllingFieldValue>
+            <controllingFieldValue>C2</controllingFieldValue>
+            <controllingFieldValue>C3</controllingFieldValue>
+            <controllingFieldValue>C4</controllingFieldValue>
+            <controllingFieldValue>C5</controllingFieldValue>
+            <valueName>Hard Refusal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>C1</controllingFieldValue>
+            <controllingFieldValue>C2</controllingFieldValue>
+            <controllingFieldValue>C3</controllingFieldValue>
+            <controllingFieldValue>C4</controllingFieldValue>
+            <controllingFieldValue>C5</controllingFieldValue>
+            <valueName>Soft Refusal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>C1</controllingFieldValue>
+            <controllingFieldValue>C2</controllingFieldValue>
+            <controllingFieldValue>C3</controllingFieldValue>
+            <controllingFieldValue>C4</controllingFieldValue>
+            <controllingFieldValue>C5</controllingFieldValue>
+            <valueName>No Contact</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>C1</controllingFieldValue>
+            <controllingFieldValue>C2</controllingFieldValue>
+            <controllingFieldValue>C3</controllingFieldValue>
+            <controllingFieldValue>C4</controllingFieldValue>
+            <controllingFieldValue>C5</controllingFieldValue>
+            <valueName>Call Back</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>C1</controllingFieldValue>
+            <controllingFieldValue>C2</controllingFieldValue>
+            <controllingFieldValue>C3</controllingFieldValue>
+            <controllingFieldValue>C4</controllingFieldValue>
+            <controllingFieldValue>C5</controllingFieldValue>
+            <valueName>Not a Distributor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>C1</controllingFieldValue>
+            <controllingFieldValue>C2</controllingFieldValue>
+            <controllingFieldValue>C3</controllingFieldValue>
+            <controllingFieldValue>C4</controllingFieldValue>
+            <controllingFieldValue>C5</controllingFieldValue>
+            <valueName>Email</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>C1</controllingFieldValue>
+            <controllingFieldValue>C2</controllingFieldValue>
+            <controllingFieldValue>C3</controllingFieldValue>
+            <controllingFieldValue>C4</controllingFieldValue>
+            <controllingFieldValue>C5</controllingFieldValue>
+            <valueName>Incomplete Data</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>C1</controllingFieldValue>
+            <controllingFieldValue>C2</controllingFieldValue>
+            <controllingFieldValue>C3</controllingFieldValue>
+            <controllingFieldValue>C4</controllingFieldValue>
+            <controllingFieldValue>C5</controllingFieldValue>
+            <valueName>Not a Contractor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>C1</controllingFieldValue>
+            <controllingFieldValue>C2</controllingFieldValue>
+            <controllingFieldValue>C3</controllingFieldValue>
+            <controllingFieldValue>C4</controllingFieldValue>
+            <controllingFieldValue>C5</controllingFieldValue>
+            <valueName>Tentative</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

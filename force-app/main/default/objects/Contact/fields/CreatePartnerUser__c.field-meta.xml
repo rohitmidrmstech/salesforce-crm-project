@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CreatePartnerUser__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This checkbox will trigger a Flow that automatically creates a partner user from the Contact. The account must first be partnered for this to work properly.</description>
+    <inlineHelpText>Click this checkbox to automatically create a partner user.</inlineHelpText>
+    <label>Create Partner User</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

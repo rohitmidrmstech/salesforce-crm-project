@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Data_Quality_Score__c</fullName>
+    <description>Data quality scoring for contacts</description>
+    <externalId>false</externalId>
+    <formula>IF 
+(RecordType.Name = &apos;Ceilings Contact&apos;, 
+   IF( LEN( Phone) = 0, 0,10) 
+   + IF( LEN( Email) = 0, 0,35) 
+   + IF( LEN(MailingStreet) = 0, 0,10) 
+   + IF( LEN(Title) = 0, 0,25) 
+   + IF( ISPICKVAL( Contact_Relationship__c ,&quot;&quot;), 0,10)
+   + IF( LEN(ReportsToId) = 0, 0, 10)
+,
+   IF( ISPICKVAL(Contact_Type__c ,&quot;&quot;), 0,25) 
+   + IF( ISPICKVAL(Role_Type__c ,&quot;&quot;), 0,25) 
+   + IF( AND( LEN( Email)= 0, Does_Not_Have_Email__c = FALSE),0,25) 
+   + IF( LEN(Title) = 0, 0,25)
+)</formula>
+    <inlineHelpText>Score must equal 100. Fields Required: Title, Phone, Email, Address &amp; Status</inlineHelpText>
+    <label>Data Quality Score</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

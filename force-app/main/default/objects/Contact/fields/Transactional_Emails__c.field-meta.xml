@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Transactional_Emails__c</fullName>
+    <description>This field is used in the Marketing Cloud data extension to determine what type of emails should be sent to a Contact from Marketing Cloud.</description>
+    <inlineHelpText>Please enter the type of emails this customer should receive.</inlineHelpText>
+    <label>Transactional Emails</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>RPG Pricing Communications</fullName>
+                <default>false</default>
+                <label>RPG Pricing Communications</label>
+            </value>
+            <value>
+                <fullName>RPG Customer Communications</fullName>
+                <default>false</default>
+                <label>RPG Customer Communications</label>
+            </value>
+            <value>
+                <fullName>SPG Pricing Communications</fullName>
+                <default>false</default>
+                <label>SPG Pricing Communications</label>
+            </value>
+            <value>
+                <fullName>SPG Customer Communications</fullName>
+                <default>false</default>
+                <label>SPG Customer Communications</label>
+            </value>
+            <value>
+                <fullName>Bufftech Customer Communications</fullName>
+                <default>false</default>
+                <label>Bufftech Customer Communications</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>
