@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Email_Opt_In_Date__c</fullName>
+    <description>The date which the user &apos;Opts In&apos; to receive emails from CertainTeed. Designed for use as a part of CASL compliance and appears on Canadian Contacts.</description>
+    <label>Email Opt In Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

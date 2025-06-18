@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Duplicate_Contact__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Check this box if this contact is a duplicate of another contact in the system.</inlineHelpText>
+    <label>Duplicate Contact</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Panel_or_Grid__c</fullName>
+    <description>This field is used to indicate the type of Ceilings products the contact sells.</description>
+    <inlineHelpText>Use this field to indicate what type of Ceilings products the contact sells.</inlineHelpText>
+    <label>Panel or Grid</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Grid Only</fullName>
+                <default>false</default>
+                <label>Grid Only</label>
+            </value>
+            <value>
+                <fullName>Panel Only</fullName>
+                <default>false</default>
+                <label>Panel Only</label>
+            </value>
+            <value>
+                <fullName>Panel &amp; Grid</fullName>
+                <default>false</default>
+                <label>Panel &amp; Grid</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

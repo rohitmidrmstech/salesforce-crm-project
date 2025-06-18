@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NPSContact__c</fullName>
+    <description>Indicates which business unit the NPS contact is related to.</description>
+    <inlineHelpText>Please choose the business unit(s) associated with this NPS contact.</inlineHelpText>
+    <label>NPS Contact</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Roofing</fullName>
+                <default>false</default>
+                <label>Roofing</label>
+            </value>
+            <value>
+                <fullName>Siding</fullName>
+                <default>false</default>
+                <label>Siding</label>
+            </value>
+            <value>
+                <fullName>Insulation</fullName>
+                <default>false</default>
+                <label>Insulation</label>
+            </value>
+            <value>
+                <fullName>Gypsum</fullName>
+                <default>false</default>
+                <label>Gypsum</label>
+            </value>
+            <value>
+                <fullName>Ceilings</fullName>
+                <default>false</default>
+                <label>Ceilings</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

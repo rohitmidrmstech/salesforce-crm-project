@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Credit_Task</fullName>
+    <availability>online</availability>
+    <description>Task for Credit Dept</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Credit Task</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/00T/e?who_id={!Contact.Id}&amp;retURL=%2F{!Contact.Id}&amp;RecordType=01270000000Hh2X&amp;cancelURL=%2F{!Contact.Id}&amp;ent=Task&amp;what_id={!Account.Id}</url>
+</WebLink>

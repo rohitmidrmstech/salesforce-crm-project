@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Survey__c</fullName>
+    <description>Link to getfeedback survey</description>
+    <externalId>false</externalId>
+    <formula>HYPERLINK(&quot;https://www.getfeedback.com/r/GL48Ej42?&amp;gf_q[[8643487][17166915]=&quot;+ FirstName +&quot; &amp;gf_q[8643487][17166994]=&quot;+ LastName +&quot;&amp;gf_q[8643487][17166916]=&quot;+ Account.Name+&quot;&amp;gf_q[8643487][17166917]=&quot;+Title+&quot;&amp;gf_q[8643487][17166918]=&quot;+ Phone+&quot; &amp;gf_q[8643487][17166939]=&quot;+ MailingCity +&quot;&amp;gf_q[8643487][17166939]=&quot;+ MailingState+&quot;&amp;ContactID=&quot;+Id +&quot;&amp;AccountID=&quot; + AccountId, &quot;Start Siding Core Survey&quot; )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Survey</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

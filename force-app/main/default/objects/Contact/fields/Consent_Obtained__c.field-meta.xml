@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Consent_Obtained__c</fullName>
+    <description>Used with CASL Compliance in Canada, this shows how Consent was Obtained for Marketing purposes.</description>
+    <inlineHelpText>Select a value to show how the Contact Obtained Consent.</inlineHelpText>
+    <label>Consent Obtained</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Tradeshow</fullName>
+                <default>false</default>
+                <label>Tradeshow</label>
+            </value>
+            <value>
+                <fullName>Webinar</fullName>
+                <default>false</default>
+                <label>Webinar</label>
+            </value>
+            <value>
+                <fullName>CertainTeed Website</fullName>
+                <default>false</default>
+                <label>CertainTeed Website</label>
+            </value>
+            <value>
+                <fullName>Lunch and Learn</fullName>
+                <default>false</default>
+                <label>Lunch and Learn</label>
+            </value>
+            <value>
+                <fullName>Product/Company Inquiry</fullName>
+                <default>false</default>
+                <label>Product/Company Inquiry</label>
+            </value>
+            <value>
+                <fullName>Existing Business Relationship</fullName>
+                <default>false</default>
+                <label>Existing Business Relationship</label>
+            </value>
+            <value>
+                <fullName>In-Person Meeting</fullName>
+                <default>false</default>
+                <label>In-Person Meeting</label>
+            </value>
+            <value>
+                <fullName>Customer Purchase (last 24 months)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Customer Purchase (last 24 months)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VFCUSTSRV__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Define a contact as VF Customer Service specifically for survey query.</description>
+    <label>VFCUSTSRV</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

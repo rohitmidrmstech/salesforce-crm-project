@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Default_Queue__c</fullName>
+    <description>for email to case routing - internal contacts</description>
+    <inlineHelpText>Pick the plant queue this contact is associated with</inlineHelpText>
+    <label>Default Queue</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Calgary Finishing Plant Queue</fullName>
+                <default>false</default>
+                <label>Calgary Finishing Plant Queue</label>
+            </value>
+            <value>
+                <fullName>Calgary Plant Queue</fullName>
+                <default>false</default>
+                <label>Calgary Plant Queue</label>
+            </value>
+            <value>
+                <fullName>Complaint Email Case Queue</fullName>
+                <default>false</default>
+                <label>Complaint Email Case Queue</label>
+            </value>
+            <value>
+                <fullName>General Email Case</fullName>
+                <default>false</default>
+                <label>General Email Case</label>
+            </value>
+            <value>
+                <fullName>Glass Warehouse Queue</fullName>
+                <default>false</default>
+                <label>Glass Warehouse Queue</label>
+            </value>
+            <value>
+                <fullName>McAdam Board Plant Queue</fullName>
+                <default>false</default>
+                <label>McAdam Board Plant Queue</label>
+            </value>
+            <value>
+                <fullName>Montreal Board &amp; Finishing Plant Queue</fullName>
+                <default>false</default>
+                <label>Montreal Board &amp; Finishing Plant Queue</label>
+            </value>
+            <value>
+                <fullName>Oakville and Toronto Plant Queue</fullName>
+                <default>false</default>
+                <label>Oakville and Toronto Plant Queue</label>
+            </value>
+            <value>
+                <fullName>Retail Queue</fullName>
+                <default>false</default>
+                <label>Retail Queue</label>
+            </value>
+            <value>
+                <fullName>Vancouver Board Plant Queue</fullName>
+                <default>false</default>
+                <label>Vancouver Board Plant Queue</label>
+            </value>
+            <value>
+                <fullName>Winnipeg Board Plant Queue</fullName>
+                <default>false</default>
+                <label>Winnipeg Board Plant Queue</label>
+            </value>
+            <value>
+                <fullName>Ontario Complaints Queue</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Ontario Complaints Queue</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

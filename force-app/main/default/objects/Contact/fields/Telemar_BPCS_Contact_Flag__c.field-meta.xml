@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Telemar_BPCS_Contact_Flag__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Checked if the contact came in from the Telemar/BPCS contact data load.  Unchecked otherwise.</inlineHelpText>
+    <label>Telemar/ Contact Flag</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

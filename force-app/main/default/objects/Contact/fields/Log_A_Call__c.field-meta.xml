@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Log_A_Call__c</fullName>
+    <externalId>false</externalId>
+    <formula>HYPERLINK(&apos;/00T/e?title=Call&amp;who_id=&apos; + Id + &apos;&amp;followup=1&amp;tsk5=Call&amp;retURL=/&apos; + Id + &apos;&amp;what_id=&apos; +  AccountId,  IMAGE(&apos;/resource/1431373835000/LogCall&apos;, &apos;Log A Call&apos;) , &apos;_self&apos;)</formula>
+    <label>Log A Call</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

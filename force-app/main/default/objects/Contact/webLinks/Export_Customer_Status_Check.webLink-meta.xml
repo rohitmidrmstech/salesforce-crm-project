@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Export_Customer_Status_Check</fullName>
+    <availability>online</availability>
+    <description>email request to check export customer status</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <hasMenubar>false</hasMenubar>
+    <hasScrollbars>true</hasScrollbars>
+    <hasToolbar>false</hasToolbar>
+    <height>600</height>
+    <isResizable>true</isResizable>
+    <linkType>url</linkType>
+    <masterLabel>Export Customer Status Check</masterLabel>
+    <openType>newWindow</openType>
+    <position>none</position>
+    <protected>false</protected>
+    <showsLocation>false</showsLocation>
+    <showsStatus>false</showsStatus>
+    <url>/email/author/emailauthorframe.jsp?email_type=html&amp;template_id=00X70000001JTgO&amp;id=00Y700000099eIQ&amp;p2_lkid=0037000000XF6rV&amp;p3_lkid=000000000000000&amp;preview=1</url>
+</WebLink>

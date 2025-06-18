@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Name_Must_Be_Valid_Name</fullName>
+    <active>true</active>
+    <description>Enforce business rules that the contact must have a valid last name.  Users were entering an asterisk as a last name instead of trying to get the customer&apos;s actual last name in order to bypass the last name requirement.</description>
+    <errorConditionFormula>AND(
+
+RecordType.Name = &apos;CertainTeed Contact&apos;,
+
+LastName = &quot;*&quot;
+)</errorConditionFormula>
+    <errorDisplayField>LastName</errorDisplayField>
+    <errorMessage>You must enter a valid last name!</errorMessage>
+</ValidationRule>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Change_Pay_Contact</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Contractor_ID__c</columns>
+    <columns>CONTACT.PHONE1</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>Status__c</columns>
+    <columns>CONTACT.ADDRESS2_CITY</columns>
+    <columns>CONTACT.ADDRESS2_STATE</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>CONTACT.CREATED_DATE</columns>
+    <columns>CONTACT.LAST_UPDATE</columns>
+    <columns>Change_Pay_Eligibility__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Change_Pay_Eligibility__c</field>
+        <operation>equals</operation>
+        <value>Eligible</value>
+    </filters>
+    <label>Change Pay Contact</label>
+    <sharedTo>
+        <role>CRM_Administrator</role>
+        <role>CertainTeed_Analyst_View_All_Data</role>
+        <role>CertainTeed_Mgmt_View_All_Data</role>
+    </sharedTo>
+</ListView>

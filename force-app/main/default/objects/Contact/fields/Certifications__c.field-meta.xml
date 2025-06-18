@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Certifications__c</fullName>
+    <inlineHelpText>Select one or more certifications this individual has achieved.</inlineHelpText>
+    <label>Certifications</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BIBS</fullName>
+                <default>false</default>
+                <label>BIBS</label>
+            </value>
+            <value>
+                <fullName>RESNET/BPI</fullName>
+                <default>false</default>
+                <label>RESNET/BPI</label>
+            </value>
+            <value>
+                <fullName>CertaSpray Certified Installer</fullName>
+                <default>false</default>
+                <label>CertaSpray Certified Installer</label>
+            </value>
+            <value>
+                <fullName>Master Craftsman</fullName>
+                <default>false</default>
+                <label>Master Craftsman</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>
